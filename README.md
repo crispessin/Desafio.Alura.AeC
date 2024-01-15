@@ -74,9 +74,9 @@ O projeto segue uma estrutura de desenvolvimento utilizando Domain-Driven Design
 ![Estrutura](Estrutura.png)
 
 - Application: Contém a lógica de inicialização e execução da aplicação.
-- Domain: Contém as classes de domínio e interfaces de repositório e scraper que precisam ser implementas pelo camada de infraestrutura.
+- Domain: Contém as classes de domínio, interfaces de repositório e scraper que precisam ser implementas pela camada de infraestrutura.
 - Infrastructure: Contém a implementação específica de acordo com as tecnologias utilizadas no projeto para persistência de dados e executar o robo.
-- Scrapers/Selenium/ConteudoChromeScraper.cs: Contém implementação utilizando Seleniun do robô que consulta e coleta os dados no site da Alura.
+- Scrapers/Selenium/ConteudoChromeScraper.cs: Contém implementação de um Scraper de Conteudo, utilizando Seleniun. O robô consulta e coleta os dados no site da Alura.
 
 
 ## Migrations
