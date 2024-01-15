@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Desafio.Alura.AeC-3afc91e5-b815-495e-a702-bf2be3abdb4c</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EFCore.NamingConventions" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.11" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.16.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Infrastructure\Persistence\Migrations\" />
+  </ItemGroup>
+</Project>

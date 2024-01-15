@@ -1,0 +1,37 @@
+version: '2'
+services:
+  postgres:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      # POSTGRES_PRIMARY_USER: postgres
+      # POSTGRES_PRIMARY_PASSWORD: yoursecurepassword
+      POSTGRES_DB: ${POSTGRES_DB:-db}
+      TZ: GMT
+    ports:
+      - 15432:5432
+    #volumes:
+    #  - ~/volumes/app/postgres/:/var/lib/postgresql/data:rw
+    networks:
+      - backend-network
+
+  pg-db-admin:
+    image: "dpage/pgadmin4:4.22"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "cris.pessin@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - 16543:80
+    #volumes:
+    #  - ~/volumes/app/pgadmin/:/var/lib/pgadmin
+    depends_on:
+      - postgres
+    networks:
+      - backend-network
+    restart: unless-stopped
+
+networks:
+  backend-network:
+    driver: bridge
