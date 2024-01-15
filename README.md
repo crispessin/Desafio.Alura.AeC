@@ -33,6 +33,8 @@ Na pasta raiz do projeto, subir o docker-compose com o banco de dados Postgres 1
 docker-compose up -d
 ```
 
+> O docker-compose está configurado para não utilizar volumes locais, então os dados são perdidos sempre que parar os containers.
+
 E rodar o projeto:
 
 ```
